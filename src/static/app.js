@@ -72,8 +72,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 const result = await response.json();
 
                 if (response.ok) {
-                  showMessage(result.message, "success");
                   await fetchActivities();
+                  showMessage(result.message, "success");
                 } else {
                   showMessage(result.detail || "Could not unregister participant", "error");
                 }
@@ -127,9 +127,9 @@ document.addEventListener("DOMContentLoaded", () => {
       const result = await response.json();
 
       if (response.ok) {
-        showMessage(result.message, "success");
-        signupForm.reset();
         await fetchActivities();
+        signupForm.reset();
+        showMessage(result.message, "success");
       } else {
         showMessage(result.detail || "An error occurred", "error");
       }
