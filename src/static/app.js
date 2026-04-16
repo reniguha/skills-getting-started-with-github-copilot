@@ -48,13 +48,17 @@ document.addEventListener("DOMContentLoaded", () => {
             const listItem = document.createElement("li");
             listItem.className = "participant-item";
 
+            const itemContent = document.createElement("div");
+            itemContent.className = "participant-content";
+
             const label = document.createElement("span");
+            label.className = "participant-label";
             label.textContent = participant;
 
             const deleteButton = document.createElement("button");
             deleteButton.type = "button";
             deleteButton.className = "participant-delete";
-            deleteButton.textContent = "×";
+            deleteButton.textContent = "🗑";
             deleteButton.setAttribute("aria-label", `Remove ${participant}`);
             deleteButton.dataset.activity = name;
             deleteButton.dataset.email = participant;
@@ -79,8 +83,9 @@ document.addEventListener("DOMContentLoaded", () => {
               }
             });
 
-            listItem.appendChild(label);
-            listItem.appendChild(deleteButton);
+            itemContent.appendChild(label);
+            itemContent.appendChild(deleteButton);
+            listItem.appendChild(itemContent);
             participantsList.appendChild(listItem);
           });
         } else {

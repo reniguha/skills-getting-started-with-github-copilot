@@ -90,19 +90,28 @@ section h3 {
 }
 
 .activity-card .participant-item {
+  margin-bottom: 10px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  background-color: #ffffff;
+  border: 1px solid #e6e9f0;
+}
+
+.activity-card .participant-content {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 12px;
-  padding: 8px 10px;
-  border-radius: 4px;
-  background-color: #fff;
-  border: 1px solid #e0e0e0;
-  margin-bottom: 8px;
+}
+
+.activity-card .participant-label {
+  color: #2f3d55;
+  font-size: 0.95rem;
+  word-break: break-word;
 }
 
 .activity-card .participant-empty {
-  padding: 8px 10px;
+  padding: 10px 14px;
   color: #757575;
 }
 
